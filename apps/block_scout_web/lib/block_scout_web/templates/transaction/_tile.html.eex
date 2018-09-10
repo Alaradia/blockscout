@@ -14,9 +14,9 @@
         <%= BlockScoutWeb.AddressView.display_address_hash(assigns[:current_address], @transaction.from_address) %>
         &rarr;
         <%= if assigns[:current_address] && assigns[:current_address].hash == to_address_hash(@transaction) do %>
-          <%= render BlockScoutWeb.AddressView, "_responsive_hash.html", address_hash: to_address_hash(@transaction), contract: BlockScoutWeb.AddressView.contract?(@transaction.to_address) %>
+          <%= render BlockScoutWeb.AddressView, "_responsive_hash.html", address: to_address(@transaction), contract: BlockScoutWeb.AddressView.contract?(@transaction.to_address) %>
         <% else %>
-          <%= render BlockScoutWeb.AddressView, "_link.html", address_hash: to_address_hash(@transaction), contract: BlockScoutWeb.AddressView.contract?(@transaction.to_address) %>
+          <%= render BlockScoutWeb.AddressView, "_link.html", address: to_address(@transaction), contract: BlockScoutWeb.AddressView.contract?(@transaction.to_address) %>
         <% end %>
       </span>
       <span class="d-flex flex-md-row flex-column mt-3 mt-md-0">

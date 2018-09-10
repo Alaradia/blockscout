@@ -67,7 +67,7 @@ defmodule BlockScoutWeb.AddressView do
   def display_address_hash(nil, target_address, truncate) do
     render(
       "_link.html",
-      address_hash: target_address.hash,
+      address: target_address,
       contract: contract?(target_address),
       truncate: truncate
     )
@@ -77,17 +77,29 @@ defmodule BlockScoutWeb.AddressView do
     if current_address.hash == target_address.hash do
       render(
         "_responsive_hash.html",
-        address_hash: current_address.hash,
+        address: current_address,
         contract: contract?(current_address),
         truncate: truncate
       )
     else
       render(
         "_link.html",
-        address_hash: target_address.hash,
+        address: target_address,
         contract: contract?(target_address),
         truncate: truncate
       )
     end
   end
+
+  @doc """
+  Returns the primary name of an address if available.
+  """
+  def primary_name(%Address{names: [_ | _] = address_names}) do
+    case Enum.find(address_names, &(&1.primary == true)) do
+      nil -> nil
+      %Address.Name{name: name} -> name
+    end
+  end
+
+  def primary_name(%Address{names: _}), do: nil
 end

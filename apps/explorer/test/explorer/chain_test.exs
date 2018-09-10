@@ -1053,9 +1053,9 @@ defmodule Explorer.ChainTest do
                Chain.address_to_internal_transactions(
                  address,
                  necessity_by_association: %{
-                   from_address: :optional,
-                   to_address: :optional,
-                   transaction: :optional
+                   [from_address: :names] => :optional,
+                   [to_address: :names] => :optional,
+                   :transaction => :optional
                  }
                )
     end
@@ -1648,7 +1648,7 @@ defmodule Explorer.ChainTest do
 
     test "finds an contract address" do
       address =
-        insert(:address, contract_code: Factory.data("contract_code"), smart_contract: nil)
+        insert(:address, contract_code: Factory.data("contract_code"), smart_contract: nil, names: [])
         |> Repo.preload(:contracts_creation_internal_transaction)
 
       response = Chain.find_contract_address(address.hash)
@@ -1829,7 +1829,8 @@ defmodule Explorer.ChainTest do
       assert smart_contract.contract_source_code != ""
       assert smart_contract.abi != ""
 
-      assert Repo.get_by(Address.Name,
+      assert Repo.get_by(
+               Address.Name,
                address_hash: smart_contract.address_hash,
                name: smart_contract.name,
                primary: true
@@ -1840,7 +1841,8 @@ defmodule Explorer.ChainTest do
       insert(:address_name, address: address, primary: true)
       assert {:ok, %SmartContract{} = smart_contract} = Chain.create_smart_contract(valid_attrs)
 
-      assert Repo.get_by(Address.Name,
+      assert Repo.get_by(
+               Address.Name,
                address_hash: smart_contract.address_hash,
                name: smart_contract.name,
                primary: true

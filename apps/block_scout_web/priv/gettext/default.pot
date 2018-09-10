@@ -32,7 +32,7 @@ msgstr ""
 msgid "BlockScout"
 msgstr ""
 
-#: lib/block_scout_web/templates/address/overview.html.eex:21
+#: lib/block_scout_web/templates/address/overview.html.eex:26
 #: lib/block_scout_web/templates/address_contract/index.html.eex:10
 #: lib/block_scout_web/templates/address_internal_transaction/index.html.eex:13
 #: lib/block_scout_web/templates/address_internal_transaction/index.html.eex:55
@@ -146,7 +146,7 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: lib/block_scout_web/views/transaction_view.ex:81
+#: lib/block_scout_web/views/transaction_view.ex:85
 msgid "Success"
 msgstr ""
 
@@ -198,8 +198,8 @@ msgstr ""
 #: lib/block_scout_web/templates/transaction/index.html.eex:16
 #: lib/block_scout_web/templates/transaction/index.html.eex:35
 #: lib/block_scout_web/templates/transaction/overview.html.eex:47
-#: lib/block_scout_web/views/transaction_view.ex:46
-#: lib/block_scout_web/views/transaction_view.ex:80
+#: lib/block_scout_web/views/transaction_view.ex:50
+#: lib/block_scout_web/views/transaction_view.ex:84
 msgid "Pending"
 msgstr ""
 
@@ -267,11 +267,11 @@ msgstr ""
 msgid "Next Page"
 msgstr ""
 
-#: lib/block_scout_web/views/transaction_view.ex:78
+#: lib/block_scout_web/views/transaction_view.ex:82
 msgid "Failed"
 msgstr ""
 
-#: lib/block_scout_web/views/transaction_view.ex:79
+#: lib/block_scout_web/views/transaction_view.ex:83
 msgid "Out of Gas"
 msgstr ""
 
@@ -441,7 +441,7 @@ msgstr ""
 msgid "Total Gas Used"
 msgstr ""
 
-#: lib/block_scout_web/views/transaction_view.ex:120
+#: lib/block_scout_web/views/transaction_view.ex:124
 msgid "Transaction"
 msgstr ""
 
@@ -526,7 +526,7 @@ msgid "Newer"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/views/transaction_view.ex:118
+#: lib/block_scout_web/views/transaction_view.ex:122
 msgid "Contract Creation"
 msgstr ""
 
@@ -601,7 +601,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/address/overview.html.eex:13
-#: lib/block_scout_web/templates/address/overview.html.eex:64
+#: lib/block_scout_web/templates/address/overview.html.eex:70
 #: lib/block_scout_web/templates/tokens/overview/_details.html.eex:13
 #: lib/block_scout_web/templates/tokens/overview/_details.html.eex:73
 msgid "QR Code"
@@ -625,17 +625,17 @@ msgid "Contract Address Pending"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/views/transaction_view.ex:119
+#: lib/block_scout_web/views/transaction_view.ex:123
 msgid "Contract Call"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/templates/address/overview.html.eex:25
+#: lib/block_scout_web/templates/address/overview.html.eex:31
 msgid "Contract created by"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/templates/address/overview.html.eex:35
+#: lib/block_scout_web/templates/address/overview.html.eex:41
 msgid "at"
 msgstr ""
 
@@ -687,7 +687,7 @@ msgid "Block Height #%{height}"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/templates/address/overview.html.eex:73
+#: lib/block_scout_web/templates/address/overview.html.eex:79
 #: lib/block_scout_web/templates/tokens/overview/_details.html.eex:82
 msgid "Close"
 msgstr ""
@@ -726,7 +726,7 @@ msgstr ""
 #, elixir-format
 #: lib/block_scout_web/templates/tokens/token/_token_transfer.html.eex:4
 #: lib/block_scout_web/templates/transaction_token_transfer/_token_transfer.html.eex:4
-#: lib/block_scout_web/views/transaction_view.ex:117
+#: lib/block_scout_web/views/transaction_view.ex:121
 msgid "Token Transfer"
 msgstr ""
 
@@ -1000,7 +1000,7 @@ msgid "Less than"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/views/transaction_view.ex:42
+#: lib/block_scout_web/views/transaction_view.ex:46
 msgid "Max of"
 msgstr ""
 
