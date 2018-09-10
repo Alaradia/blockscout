@@ -1,11 +1,37 @@
 defmodule BlockScoutWeb.AddressView do
   use BlockScoutWeb, :view
 
-  alias Explorer.Chain.{Address, Hash, SmartContract, TokenTransfer, Transaction}
+  alias Explorer.Chain.{Address, Hash, InternalTransaction, SmartContract, TokenTransfer, Transaction}
 
   @dialyzer :no_match
 
   def address_partial_selector(struct_to_render_from, direction, current_address, truncate \\ false)
+
+  def address_partial_selector(
+        %InternalTransaction{to_address_hash: nil, created_contract_address_hash: nil},
+        :to,
+        _current_address,
+        _truncate
+      ) do
+    gettext("Contract Address Pending")
+  end
+
+  def address_partial_selector(
+        %InternalTransaction{to_address_hash: nil, created_contract_address_hash: hash},
+        :to,
+        current_address,
+        truncate
+      ) do
+    matching_address_check(current_address, hash, true, truncate)
+  end
+
+  def address_partial_selector(%InternalTransaction{to_address: address}, :to, current_address, truncate) do
+    matching_address_check(current_address, address.hash, contract?(address), truncate)
+  end
+
+  def address_partial_selector(%InternalTransaction{from_address: address}, :from, current_address, truncate) do
+    matching_address_check(current_address, address.hash, contract?(address), truncate)
+  end
 
   def address_partial_selector(%TokenTransfer{to_address: address}, :to, current_address, truncate) do
     matching_address_check(current_address, address.hash, contract?(address), truncate)
