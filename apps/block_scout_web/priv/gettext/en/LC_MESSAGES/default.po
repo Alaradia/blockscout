@@ -613,7 +613,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/address/overview.html.eex:13
-#: lib/block_scout_web/templates/address/overview.html.eex:67
+#: lib/block_scout_web/templates/address/overview.html.eex:59
 #: lib/block_scout_web/templates/tokens/overview/_details.html.eex:13
 #: lib/block_scout_web/templates/tokens/overview/_details.html.eex:81
 msgid "QR Code"
@@ -647,7 +647,7 @@ msgid "Contract created by"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/templates/address/overview.html.eex:38
+#: lib/block_scout_web/templates/address/overview.html.eex:34
 msgid "at"
 msgstr ""
 
@@ -681,8 +681,8 @@ msgstr ""
 #: lib/block_scout_web/templates/address_internal_transaction/index.html.eex:42
 #: lib/block_scout_web/templates/address_read_contract/index.html.eex:36
 #: lib/block_scout_web/templates/address_transaction/index.html.eex:42
-#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:25
-#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:42
+#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:26
+#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:43
 #: lib/block_scout_web/templates/tokens/token/show.html.eex:27
 #: lib/block_scout_web/templates/tokens/token/show.html.eex:46
 msgid "Read Contract"
@@ -699,7 +699,7 @@ msgid "Block Height #%{height}"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/templates/address/overview.html.eex:76
+#: lib/block_scout_web/templates/address/overview.html.eex:68
 #: lib/block_scout_web/templates/tokens/overview/_details.html.eex:90
 msgid "Close"
 msgstr ""
@@ -781,9 +781,9 @@ msgid "Token Details"
 msgstr ""
 
 #, elixir-format
-#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:17
-#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:34
-#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:37
+#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:18
+#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:35
+#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:38
 #: lib/block_scout_web/templates/tokens/token/show.html.eex:18
 #: lib/block_scout_web/templates/tokens/token/show.html.eex:37
 #: lib/block_scout_web/templates/tokens/token/show.html.eex:40
@@ -826,7 +826,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/address_read_contract/index.html.eex:45
-#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:52
+#: lib/block_scout_web/templates/tokens/read_contract/index.html.eex:53
 msgid "loading..."
 msgstr ""
 
